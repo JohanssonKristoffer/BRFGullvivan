@@ -60,5 +60,11 @@ namespace BRFGullvivan.Controllers
 
             return View();
         }
+        public ActionResult About()
+        {
+            ViewBag.Message = "About";
+
+            return View();
+        }
     }
 }
