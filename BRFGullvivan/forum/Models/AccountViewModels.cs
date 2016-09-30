@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace forum.Models
+namespace BRFGullvivan.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

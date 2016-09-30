@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Linq;
+using System.Security.Policy;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using forum.Models;
+using BRFGullvivan.Models;
+using forum;
 
-namespace forum.Controllers
+namespace BRFGullvivan.Controllers
 {
     [Authorize]
     public class ManageController : Controller
@@ -32,9 +34,9 @@ namespace forum.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -195,7 +197,9 @@ namespace forum.Controllers
         }
 
         //
-        // GET: /Manage/RemovePhoneNumber
+        // POST: /Manage/RemovePhoneNumber
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> RemovePhoneNumber()
         {
             var result = await UserManager.SetPhoneNumberAsync(User.Identity.GetUserId(), null);
@@ -331,7 +335,7 @@ namespace forum.Controllers
             base.Dispose(disposing);
         }
 
-#region Helpers
+        #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
@@ -382,6 +386,6 @@ namespace forum.Controllers
             Error
         }
 
-#endregion
+        #endregion
     }
 }
