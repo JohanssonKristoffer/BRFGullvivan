@@ -234,6 +234,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\AreaofCare.cshtml" />
+    <Content Include="Views\Home\Forum.cshtml" />
+    <Content Include="Views\Home\Images.cshtml" />
+    <Content Include="Views\Home\Keys.cshtml" />
+    <Content Include="Views\Home\Protocols.cshtml" />
+    <Content Include="Views\Home\Stadgar.cshtml" />
+    <Content Include="Views\Home\StyrelseInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

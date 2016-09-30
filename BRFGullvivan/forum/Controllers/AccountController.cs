@@ -11,7 +11,6 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BRFGullvivan.Models;
 using forum;
-using forum.Models;
 
 namespace BRFGullvivan.Controllers
 {
